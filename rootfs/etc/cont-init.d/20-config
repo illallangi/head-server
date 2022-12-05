@@ -2,8 +2,10 @@
 set -e
 
 export TITLE=${TITLE:-Andrew Cole Has A Massive Head}
+export CALLOUT=${CALLOUT:-Fork me on Github}
+export CALLOUT_URL=${CALLOUT_URL:-https://github.com/illallangi/head-server}
 
-# mkdir -p /etc/samba /config
+echo CALLOUT="${CALLOUT}"
+echo CALLOUT_URL="${CALLOUT_URL}"
+
 confd -onetime -backend env || exit 1
-
-# cat /etc/samba/smb.conf
