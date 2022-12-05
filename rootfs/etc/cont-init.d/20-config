@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bash
+set -e
+
+export TITLE=${TITLE:-Andrew Cole Has A Massive Head}
+
+# mkdir -p /etc/samba /config
+confd -onetime -backend env || exit 1
+
+# cat /etc/samba/smb.conf
