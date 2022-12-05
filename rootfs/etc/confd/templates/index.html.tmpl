@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Andrew Cole Has A Massive Head</title>
+<title>{{getv "/title"}}</title>
 <style>
 body, html {
   height: 100%;
@@ -51,9 +51,11 @@ h3 {
 <body>
 
 <div class="bgimg-1">
-  <div class="github-ribbon" style="position: absolute; width: 150px; height: 150px; overflow: hidden; z-index: 99999; right: 0px; top: 0px;"><a target="_blank" href="https://github.com/illallangi/head-server" style="display: inline-block; width: 200px; overflow: hidden; padding: 6px 0px; text-align: center; transform: rotate(45deg); text-decoration: none; color: rgb(255, 255, 255); position: inherit; border-width: 1px 0px; border-style: dotted; border-color: rgba(255, 255, 255, 0.7); font: 700 13px 'Helvetica Neue', Helvetica, Arial, sans-serif; box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 3px 0px; background-color: rgb(170, 0, 0); right: -40px; top: 45px;">Fork me on Github</a></div>
+{{if (ne (getv "/callout") "hide")}}
+  <div class="github-ribbon" style="position: absolute; width: 150px; height: 150px; overflow: hidden; z-index: 99999; right: 0px; top: 0px;"><a target="_blank" href="{{getv "/callout/url"}}" style="display: inline-block; width: 200px; overflow: hidden; padding: 6px 0px; text-align: center; transform: rotate(45deg); text-decoration: none; color: rgb(255, 255, 255); position: inherit; border-width: 1px 0px; border-style: dotted; border-color: rgba(255, 255, 255, 0.7); font: 700 13px 'Helvetica Neue', Helvetica, Arial, sans-serif; box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 3px 0px; background-color: rgb(170, 0, 0); right: -40px; top: 45px;">{{getv "/callout"}}</a></div>
+{{end}}
   <div class="caption">
-    <span class="border"><a href="/">Andrew Cole Has A Massive Head</a</span>
+    <span class="border"><a href="/">{{getv "/title"}}</a</span>
   </div>
 </div>
 

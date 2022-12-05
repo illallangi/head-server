@@ -1,0 +1,8 @@
+[template]
+src  = "index.html.tmpl"
+dest = "/var/www/html/index.html"
+keys = [
+    "/title",
+    "/callout",
+    "/callout/url",
+]
