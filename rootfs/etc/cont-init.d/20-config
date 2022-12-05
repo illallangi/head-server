@@ -1,0 +1,11 @@
+#!/usr/bin/with-contenv bash
+set -e
+
+export TITLE=${TITLE:-Andrew Cole Has A Massive Head}
+export CALLOUT=${CALLOUT:-Fork me on Github}
+export CALLOUT_URL=${CALLOUT_URL:-https://github.com/illallangi/head-server}
+
+echo CALLOUT="${CALLOUT}"
+echo CALLOUT_URL="${CALLOUT_URL}"
+
+confd -onetime -backend env || exit 1
