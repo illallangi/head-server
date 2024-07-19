@@ -1,5 +1,5 @@
 # main image
-FROM docker.io/library/php:8.3.8-apache
+FROM docker.io/library/php:8.3.9-apache
 
 # Install confd
 RUN \
